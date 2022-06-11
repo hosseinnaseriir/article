@@ -49,6 +49,8 @@ const AddArticls = () => {
       img,
       tags,
       like: 0,
+      youlike: false,
+      comments: [],
     };
     const articlesList = [...articles, newArticle];
     setArticles(articlesList);
@@ -111,24 +113,10 @@ const AddArticls = () => {
 
                   <CKEditor
                     editor={ClassicEditor}
-                    // config={{
-                    //   toolbar: ["bold", "italic"],
-                    // }}
-                    data="<p>Enter your text!</p>"
-                    onReady={(editor) => {
-                      // You can store the "editor" and use when it is needed.
-                      console.log("Editor is ready to use!", editor);
-                    }}
+                    data="<p>Hello from CKEditor 5!</p>"
                     onChange={(event, editor) => {
                       const data = editor.getData();
-                      console.log({ event, editor, data });
                       setArticle(data);
-                    }}
-                    onBlur={(event, editor) => {
-                      console.log("Blur.", editor);
-                    }}
-                    onFocus={(event, editor) => {
-                      console.log("Focus.", editor);
                     }}
                   />
                   <TextField

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 export const HomeCard = ({ icon, title, href = "#", onClick }) => {
   const classes = useStyles();
+  console.log('HomeCard RENDERED!')
+
   return (
     <ButtonBase onClick={onClick} className={classes.homeCard}>
       <Link to={href}>

@@ -9,13 +9,13 @@ import ContextProvider from "./contexts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <ContextProvider>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
+  <ContextProvider>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <React.StrictMode>
           <App />
-        </BrowserRouter>
-      </ThemeProvider>
-    </ContextProvider>
-  </React.StrictMode>
+        </React.StrictMode>
+      </BrowserRouter>
+    </ThemeProvider>
+  </ContextProvider>
 );

@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 
 const Loader = () => {
-
+  console.log("Loader RENDERED!");
   return (
     <Box
       position="fixed"
@@ -19,5 +19,6 @@ const Loader = () => {
     </Box>
   );
 };
+
 
 export default Loader;

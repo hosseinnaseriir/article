@@ -12,6 +12,7 @@ import { CardMedia, Grid } from "@mui/material";
 const CardArticles = ({ title, onClick ,summary, img, icon, icon1 }) => {
   const classes = useStyles();
 
+  console.log('CardArticles RENDERED!')
   return (
     <Grid onClick={onClick} item lg={3} className={classes.root}>
       <Card>

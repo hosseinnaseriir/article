@@ -63,9 +63,11 @@ const Auth = () => {
                 setCookie("token", res.data.token, {
                   maxAge: 60 * 60 * 24, // 1Day
                 });
+                localStorage.setItem("user", values.email);
                 setLoader(false);
                 navigate("/");
               } catch (ex) {
+                setLoader(false);
                 toast.warn("somethin wrong ! check email or password !");
               }
             }}
@@ -85,7 +87,6 @@ const Auth = () => {
                     // value is our initial values key
                     value={handlers.values.email}
                   ></TextField>
-                  {console.log(handlers.errors)}
                   {handlers.errors.password}
                   <TextField
                     placeholder="Enter Your Password..."

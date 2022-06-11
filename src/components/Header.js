@@ -8,11 +8,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
-  console.log(navigate);
   const handleClickBack = () => navigate(-1);
-
   const location = useLocation();
-
+  
+  console.log('Header RENDERED!')
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
